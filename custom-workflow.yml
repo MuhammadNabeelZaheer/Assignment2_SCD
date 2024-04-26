@@ -1,0 +1,15 @@
+name: Custom Workflow Integration
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  custom-task:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Add custom steps here to automate a specific task or process relevant to your project.
